@@ -1,0 +1,66 @@
+Identifiers:-
+-->Identifiers are used to define variables, functions or other user defined variables. Identifiers start with a letter, a dollar or an underscore. They cannot start
+   with a number.
+--> Here are some examples of valid identifiers − def employeename ,def student1 , def student_name.
+-->where def is a keyword used in Groovy to define an identifier.
+-->class Example {
+   static void main(String[] args) {
+      // One can see the use of a semi-colon after each statement
+      def x = 5;
+      println('Hello World'); 
+     }
+   } 
+-->In the above example, the variable x is used as an identifier.
+Variables:
+-->Variables are nothing but reserved memory locations to store values. This means that when you create a variable you reserve some space in memory to store the value 
+   associated with the variable.
+-->Variables in Groovy can be defined in two ways − using the native syntax for the data type or the next is by using the def keyword. For variable definitions it is
+   mandatory to either provide a type name explicitly or to use "def" in replacement. This is required by the Groovy parser.
+-->The name of a variable can be composed of letters, digits, and the underscore character. It must begin with either a letter or an underscore. Upper and lowercase
+   letters are distinct because Groovy, just like Java is a case-sensitive programming language.
+
+Bitwise Operators:
+Sr.No	Operator & Description
+1             &                 This is the bitwise “and” operator
+2             |                 This is the bitwise “or” operator
+3             ^                 This is the bitwise “xor” or Exclusive or operator
+4	      ~                 This is the bitwise negation operator
+
+Range Operators:
+-->Groovy supports the concept of ranges and provides a notation of range operators with the help of the .. notation. A simple example of the range operator is given 
+   below.
+-->Example : def range = 0..5 
+   This just defines a simple range of integers, stored into a local variable called range with a lower bound of 0 and an upper bound of 5.
+   The following code snippet shows how the various operators can be used.
+   class Example 
+	{ 
+   		static void main(String[] args) { 
+      		def range = 5..10; 
+      		println(range); 
+      		println(range.get(2)); 
+   		} 
+	}
+-->Output -[5, 6, 7, 8, 9, 10] 
+           7
+
+Reading files:-
+-->The following example will output all the lines of a text file in Groovy. The method eachLine is in-built in the File class in Groovy for the purpose of ensuring
+   that each line of the text file is read.
+-->import java.io.File 
+class Example { 
+   static void main(String[] args) { 
+      new File("E:/Example.txt").eachLine {  
+         line -> println "line : $line"; 
+      } 
+   } 
+}
+The File class is used to instantiate a new object which takes the file name as the parameter. It then takes the function of eachLine, puts it to a variable called line and prints it accordingly.
+
+If the file contains the following lines, they will be printed.
+
+line : Example1
+line : Example2
+
+==> String c = "'Hello Triple" + "Multiple lines'"; output=>'Hello TripleMultiple lines'
+
+
